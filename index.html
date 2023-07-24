@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page</title>
+</head>
+<body>
+  <script>
+    //the big showdown
+   function game ()
+  {
+    var playerChoice = prompt("Rock, Paper, Scissors, SHOOT!"); //Prompts user with popup window
+
+    var x = (Math.random())
+    if (x < .33) {
+      computerChoice = "Rock"
+    } else if (x > .34 && x < .66) {
+      computerChoice = "Paper"
+    } else {
+      computerChoice = "Scissors" //in other words, .67-1 is "Scissors"
+    } //using Math.random allows me to assign these variables to random numbers evenly
+    
+    if (playerChoice == computerChoice) {
+      console.log("Tie!")
+    } else if (playerChoice == "Rock" && computerChoice == "Scissors") {
+      console.log("You win! Rock crushes Scissors.")
+    } else if (playerChoice == "Scissors" && computerChoice == "Paper") {
+      console.log("You win! Scissors snips up Paper.")
+    } else if (playerChoice == "Paper" && computerChoice == "Rock") {
+      console.log("You win! Paper covers Rock (I guess).")
+    } else if (playerChoice == "Rock" && computerChoice == "Paper") {
+      console.log("You lose! Rock gets covered by Paper (somehow).")
+    } else if (playerChoice == "Scissors" && computerChoice == "Rock") {
+      console.log("You lose! Scissors get smashed by Rock.")
+    } else {
+      console.log("You lose! Paper gets cut up by Scissors.") //this should have exhausted every other option, leaving a simple "else" an acceptable means to an end
+    } 
+    
+  }
+  for (let i = 0; i < 5; i++) {
+    game(); //repeat that function 5 times
+  }
+
+  
+   
+  
+  </script>
+</body>
+</html>
